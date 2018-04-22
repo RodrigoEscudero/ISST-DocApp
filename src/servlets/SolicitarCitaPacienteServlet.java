@@ -102,7 +102,6 @@ public class SolicitarCitaPacienteServlet  extends HttpServlet{
 			resp.sendRedirect(req.getContextPath() + "/SolicitarCitaPaciente.jsp");
 			System.out.println("5333333");
 
-
 		}
 	}
 }
