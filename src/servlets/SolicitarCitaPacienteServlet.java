@@ -95,7 +95,7 @@ public class SolicitarCitaPacienteServlet  extends HttpServlet{
 			
 			PacienteDAOImplementation.getInstance().updatePaciente(paciente_dni);
 			MedicoDAOImplementation.getInstance().updateMedico(medico);
-			CitaDAOImplementation.getInstance().updeteCita(cita);
+			CitaDAOImplementation.getInstance().updateCita(cita);
 
 			req.getSession().setAttribute("cita_list", citas);
 

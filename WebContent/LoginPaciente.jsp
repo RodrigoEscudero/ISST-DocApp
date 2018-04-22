@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h2>Vista Paciente</h2>
-<%@ include file="NavbarPaciente.jsp" %>
+<%@ include file = "NavbarPaciente.jsp" %>
 <%@ include file = "FormLogout.jsp" %>
 
 <h3>INFORMACIÓN</h3>

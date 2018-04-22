@@ -36,7 +36,7 @@ public class CitaDAOImplementation implements CitaDAO {
 	}
 
 	@Override
-	public void updeteCita(Cita cita) {
+	public void updateCita(Cita cita) {
 		Session session = SessionFactoryService.get().openSession();
 		try {
 			session.beginTransaction();
@@ -58,6 +58,21 @@ public class CitaDAOImplementation implements CitaDAO {
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			System.out.println("CitaDAOImplementation delete:" + e);
+		} finally {
+			session.close();
+		}
+	}
+
+	public void deleteById(int id){
+		Session session = SessionFactoryService.get().openSession();
+		Cita cita = null;
+		try {
+			session.beginTransaction();
+		    cita = (Cita)session.load(Cita.class,id);
+			session.delete(cita);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			System.out.println("CitaDAOImplementation deleteById:" + e);
 		} finally {
 			session.close();
 		}
