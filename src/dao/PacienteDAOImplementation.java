@@ -82,7 +82,6 @@ public class PacienteDAOImplementation implements PacienteDAO {
 		} finally {
 			session.close();
 		}
-
 		return paciente;
 	}
 
@@ -121,23 +120,5 @@ public class PacienteDAOImplementation implements PacienteDAO {
 			session.close();
 		}
 		return pacientes;
-	}
-	
-	@Override
-	public List<Cita> readCitasPaciente(String dni) {
-		Session session = SessionFactoryService.get().openSession();
-		List <Cita> citasPaciente= new ArrayList<>();
-		try {
-			//"select p from  Paciente p where p.dni = :dni and p.password = :password"
-			session.beginTransaction();
-			citasPaciente = session.createQuery("select c from Cita c where c.dni = :dni")
-					.list();
-			session.getTransaction().commit();
-		} catch (Exception e) {
-			System.out.println("PacienteDAOImplementation readCitasPaciente:" + e);
-		} finally {
-			session.close();
-		}
-		return citasPaciente;
 	}
 }

@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet{
 					if (null != medico) {
 						req.getSession().setAttribute("medico", medico);
 						req.getSession().setAttribute("paciente_list",PacienteDAOImplementation.getInstance().readAllPaciente());
-						req.getSession().setAttribute("cita_list",CitaDAOImplementation.getInstance().readAllCita());
+						req.getSession().setAttribute("cita_list",medico.getCitas_medico());
 						resp.sendRedirect(req.getContextPath() + "/LoginMedico.jsp");	 
 						redirect = true;
 					} 

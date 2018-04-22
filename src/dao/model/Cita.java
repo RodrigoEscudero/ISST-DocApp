@@ -15,8 +15,6 @@ public class Cita implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	
-	
 	private Date fechaCita;
 	private Date horaInicio;
 	private Date horaFinal;
@@ -27,10 +25,10 @@ public class Cita implements Serializable {
 	private int status;
 	private String comentarios;
 	
-	@ManyToOne
+	@ManyToOne()
 	private Paciente paciente;
 	
-	@ManyToOne
+	@ManyToOne()
 	private Medico medico;
 	
 	public Cita() {

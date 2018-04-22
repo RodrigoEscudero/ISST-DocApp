@@ -14,5 +14,4 @@ public interface PacienteDAO {
 	public Paciente readPaciente (String dni);
 	public Paciente loginPaciente(String dni, String password);
 	public List <Paciente> readAllPaciente();
-	public List <Cita> readCitasPaciente(String dni);
 }

@@ -85,7 +85,7 @@ public class CitaDAOImplementation implements CitaDAO {
 		List <Cita> citas= new ArrayList<>();
 		try {
 			session.beginTransaction();
-			citas.addAll(session.createQuery("from CITA").list());
+			citas.addAll(session.createQuery("from Cita").list());
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			System.out.println("CitaDAOImplementation readAllCita:" + e);

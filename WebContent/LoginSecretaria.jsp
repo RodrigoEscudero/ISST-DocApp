@@ -41,7 +41,7 @@
 				<td>${citai.id}</td>
 				<td>${citai.fechaCita}</td>
 				<td>${citai.horaInicio}</td>
-				<td>${citai.horaFin}</td>
+				<td>${citai.horaFinal}</td>
 				<td>${citai.paciente.nombre} ${citai.paciente.apellido1} ${citai.paciente.apellido2}</td>
 				<td>${citai.medico.nombre} ${citai.medico.apellido1}</td>
 				<td>${citai.status}</td>
