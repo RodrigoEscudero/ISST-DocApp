@@ -26,7 +26,8 @@
 	
 	<h3>  Ver Perfil de Paciente</h3>
 	<p>Elija el Paciente</p>
-	<%@ include file = "FormVerPac.jsp" %>
+<%-- <%-- 	<%@ include file = "FormVerPac.jsp" %>
+ --%><%@ include file = "FormMedVerPac.jsp" %>
 	
 	<h3>Lista de Citas</h3>
 	<table border=1>

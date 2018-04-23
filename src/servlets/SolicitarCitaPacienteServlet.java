@@ -19,7 +19,7 @@ import dao.model.Paciente;
 
 
 @WebServlet("/SolicitarCitaPacienteServlet")
-public class SolicitarCitaPacienteServlet  extends HttpServlet{
+public class SolicitarCitaPacienteServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -48,7 +48,6 @@ public class LoginServlet extends HttpServlet{
 		} else {
 			Paciente paciente = PacienteDAOImplementation.getInstance().loginPaciente(userStr, password);
 			if (paciente!=null){
-			
 				req.getSession().setAttribute("paciente", paciente);
 				req.getSession().setAttribute("cita_list", paciente.getCitas_paciente());
 				redirect = true;
@@ -58,7 +57,6 @@ public class LoginServlet extends HttpServlet{
 					Medico medico = MedicoDAOImplementation.getInstance().loginMedico(Integer.parseInt(userStr), password);
 					if (null != medico) {
 						req.getSession().setAttribute("medico", medico);
-						req.getSession().setAttribute("paciente_list",PacienteDAOImplementation.getInstance().readAllPaciente());
 						req.getSession().setAttribute("cita_list",medico.getCitas_medico());
 						resp.sendRedirect(req.getContextPath() + "/LoginMedico.jsp");	 
 						redirect = true;

@@ -11,15 +11,15 @@ import dao.model.Paciente;
 public class CitaDAOImplementation implements CitaDAO {
 
 	public static CitaDAOImplementation instance;
-	private CitaDAOImplementation() {
-
-	}
+	private CitaDAOImplementation() {}
+	
 	public static CitaDAOImplementation getInstance() {
 		if(null== instance) {
 			instance = new CitaDAOImplementation();
 		}
 		return instance;
 	}
+	
 	@Override
 	public void createCita(Cita cita) {
 		Session session = SessionFactoryService.get().openSession();
@@ -32,7 +32,6 @@ public class CitaDAOImplementation implements CitaDAO {
 		} finally {
 			session.close();
 		}
-
 	}
 
 	@Override
