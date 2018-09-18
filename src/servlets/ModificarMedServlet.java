@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.MedicoDAOImplementation;
 import dao.model.Medico;
+import util.EmailHandler;
 
 
 @WebServlet("/ModificarMedServlet")
@@ -34,7 +35,10 @@ public class ModificarMedServlet extends HttpServlet{
 		if(password != "") {med.setPassword(password);}
 		
 		MedicoDAOImplementation.getInstance().updateMedico(med);
-
+		
+		EmailHandler polo = new EmailHandler();
+		polo.sendEmail("Secretaria@gmail.com", "medico1@gmail.com", "Modificacion de perfil", "Hola, se ha modificado su perfil");
+		
 		resp.sendRedirect(req.getContextPath() + "/LoginSecretaria.jsp");
 		
 	}

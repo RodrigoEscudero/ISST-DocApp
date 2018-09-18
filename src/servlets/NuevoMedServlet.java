@@ -34,7 +34,10 @@ public class NuevoMedServlet extends HttpServlet{
 		med.setTfno(t);
 		med.setMail(email);
 		med.setPassword(password);
-		
+		 String[] horas={"10:00","10:15","10:30","10:45", "11:00", "11:15", "11:30","11:45",
+				         "12:00","12:15","12:30","12:45", "13:00", "13:15", "13:30","13:45" };
+		med.setHoras(horas);
+
 		MedicoDAOImplementation.getInstance().createMedico(med);
 		
 		resp.sendRedirect(req.getContextPath() + "/LoginSecretaria.jsp");

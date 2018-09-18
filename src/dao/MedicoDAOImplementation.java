@@ -2,6 +2,7 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Session;
 
@@ -32,7 +33,6 @@ public class MedicoDAOImplementation implements MedicoDAO{
 		} finally {
 			session.close();
 		}
-
 	}
 
 
@@ -118,7 +118,7 @@ public class MedicoDAOImplementation implements MedicoDAO{
 		}
 		return medicos;
 	}
-	
+
 	@Override
 	public List<Medico> readMedicoEspecialidad(String especialidad) {
 		// TODO Auto-generated method stub
@@ -136,7 +136,7 @@ public class MedicoDAOImplementation implements MedicoDAO{
 		}
 		return medicos;
 	}
-	
+
 	@Override
 	public List<String> readEspecialidades() {
 		Session session = SessionFactoryService.get().openSession();
@@ -153,5 +153,4 @@ public class MedicoDAOImplementation implements MedicoDAO{
 		}
 		return especialidades;
 	}
-
 }

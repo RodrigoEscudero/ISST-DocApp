@@ -10,14 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
+
 public class Cita implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private Date fechaCita;
-	private Date horaInicio;
-	private Date horaFinal;
+	private String horaInicio;
+	private String horaFinal;
 	private String especialidad;
 
 
@@ -47,19 +48,19 @@ public class Cita implements Serializable {
 		this.fechaCita = fechaCita;
 	}
 
-	public Date getHoraInicio() {
+	public String getHoraInicio() {
 		return horaInicio;
 	}
 
-	public void setHoraInicio(Date horaInicio) {
+	public void setHoraInicio(String horaInicio) {
 		this.horaInicio = horaInicio;
 	}
 
-	public Date getHoraFinal() {
+	public String getHoraFinal() {
 		return horaFinal;
 	}
 
-	public void setHoraFinal(Date horaFinal) {
+	public void setHoraFinal(String horaFinal) {
 		this.horaFinal = horaFinal;
 	}
 
@@ -100,6 +101,5 @@ public class Cita implements Serializable {
 
 	public void setEspecialidad(String especialidad) {
 		this.especialidad = especialidad;
-	}
-	
+	}	
 }

@@ -2,17 +2,22 @@ package dao.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Medico  implements Serializable{
+public class Medico implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -25,10 +30,10 @@ public class Medico  implements Serializable{
 	private String lugar;
 	private String tfno;
 	private String mail;
-
+	private String[] horas={"10", "11", "12", "13"};
+	
 	@OneToMany(mappedBy="medico", fetch= FetchType.EAGER)
 	private List <Cita> citas_medico;
-
 
 	public Medico () {
 		citas_medico = new ArrayList <>();
@@ -106,6 +111,10 @@ public class Medico  implements Serializable{
 	public void setCitas_medico(List<Cita> citas_medico) {
 		this.citas_medico = citas_medico;
 	}
-
-
+	public String[] getHoras() {
+		return horas;
+	}
+	public void setHoras(String[] horas) {
+		this.horas = horas;
+	}
 }

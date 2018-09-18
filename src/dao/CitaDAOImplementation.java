@@ -1,11 +1,14 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import dao.model.Cita;
+import dao.model.Medico;
 import dao.model.Paciente;
 
 public class CitaDAOImplementation implements CitaDAO {

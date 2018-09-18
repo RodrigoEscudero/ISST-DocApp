@@ -3,6 +3,8 @@ package dao;
 import java.util.List;
 
 import dao.model.Cita;
+import dao.model.Medico;
+import dao.model.Paciente;
 
 public interface CitaDAO {
 
