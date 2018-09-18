@@ -5,5 +5,5 @@
 					<option value=${ medicoi.id}>${medicoi.nombre} ${medicoi.apellido1} ${medicoi.apellido2 }</option>
 				</c:forEach>
 		</select>
-		<button type="submit">Modificar</button>
+		<button  class="btn btn-primary" type="submit">Modificar</button>
 </form>

@@ -10,6 +10,6 @@ Teléfono: <input type="text" name="telefono" placeholder="Teléfono"/><br>
 Email: <input type="text" name="email" placeholder="Email"/><br>
 Contraseña: <input type="password" name="password" placeholder="Contraseña"/><br>
 
-<button type="submit">Registrar</button>
+<button class="btn btn-primary" type="submit">Registrar</button>
 
 </form>

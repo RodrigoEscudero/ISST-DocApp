@@ -1,5 +1,5 @@
 <form action="ModificarMedServlet">
-<h3>MODIFICAR LOS DATOS</h3>
+<h2>Modificar los datos</h2>
 <input type="hidden" value="${medico.id}" name="med_id"/>
 Nombre: ${medico.nombre}<br>
 Primer Apellido: ${medico.apellido1}<br>

@@ -5,6 +5,6 @@
 
     <input type="password" name="passwordNueva" placeholder="Nueva Contraseña"/>
     <input type="password" name="passwordNuevaRep" placeholder="Repita nueva Contraseña"/>
-    <button type="submit">Cambiar contraseña</button>
+    <button class="btn btn-primary" type="submit">Cambiar contraseña</button>
 
 </form>

@@ -1,16 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<html>
+<%@ include file="Head.jsp"%>
+<body><%@ include file="NavbarPaciente.jsp"%>
+	<div class="cuerpo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 titulo">
+					<h1>Registro de Personal M�dico</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 datos">
+					<%@ include file="NuevoMed.jsp"%>
+				</div>
+			</div>
+		</div>
 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Registro de Personal Médico</title>
-</head>
-<body>
-<h2>Registro de Personal Médico</h2>
-<%@ include file = "NuevoMed.jsp" %>
+	</div>
+	<%@ include file="Footer.jsp"%>
 </body>
 </html>
